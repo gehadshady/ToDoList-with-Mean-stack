@@ -11,6 +11,6 @@ app.listen(port,()=>{
 
 app.use(body_parser);
 
-mongoose.connect("mongodb+srv://gehad:123@todo-list-eyumt.mongodb.net/test?retryWrites=true",{ useNewUrlParser: true });
+mongoose.connect("mongodb+srv://gehad:123@todo-list-eyumt.mongodb.net/test?retryWrites=true");
 
 app.use("/api/user",userRouter);
