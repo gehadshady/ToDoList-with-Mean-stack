@@ -1,0 +1,18 @@
+<app-navbar [currentuser]=currentuser></app-navbar>
+<div class="container">
+  <h1 class="text-center lead mt-4">Welcome to your ToDo List</h1>
+  <hr class="w-25 mx-auto bg-info">
+  <div class="list-group mt-5">
+    <a *ngFor="let item of currentuser.list" class="list-group-item list-group-item-action">
+      {{item}}
+    </a>
+  </div>
+
+  <form class="form-inline mt-5 p-4 bg-light rounded-lg w-50">
+    <div class="form-group w-75 mb-2 mr-3">
+      <input #newItem type="text" class="form-control w-100" id="inputPassword2" placeholder="Add new Item">
+    </div>
+    <button type="submit" class="btn btn-success mb-2" 
+    (click)="addItem(newItem.value)" >Add</button>
+  </form>
+</div>

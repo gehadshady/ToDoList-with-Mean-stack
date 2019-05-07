@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h2 class=" text-center">Login</h2>
+  <form   #Fref="ngForm" (submit)=Login(Fref.form.value)>
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <input required name="email" [(ngModel)]="currentUser.email"  type="email" class="form-control" id="Email" placeholder="Enter email">
+    </div>
+    
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input required name="password" [(ngModel)]="currentUser.password" type="password" class="form-control" id="password" placeholder="Enter password">
+    </div>
+
+    <button type="submit" [disabled]="!Fref.valid" class="btn btn-primary">Login</button>
+  </form>
+
+  <p class="lead mt-5">Don't have an acount ? </p>
+  <button (click)="gotoRigster()" class="btn btn-info">Registar Now !</button>
+</div>  
