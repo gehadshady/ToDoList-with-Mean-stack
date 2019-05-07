@@ -7,7 +7,6 @@
   "description": "api for to-do-list",
   "scripts": {
     "start": "nodemon app.js",
-    "postinstall": "bower install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
